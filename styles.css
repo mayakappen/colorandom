@@ -1,18 +1,39 @@
+* {
+  font-family: 'Itim', cursive;
+}
+
+
+html {
+  height: 100vh;
+  /* width: 100vw; */
+}
 
 body {
   display: flex;
   justify-content: center;
+  height: 100vh;
+  /* width: 100vw; */
 }
 
 
 .main-interface {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  height: 89vh;
+  width: 75%;
+  align-items: center;
+  /* width: 100vw; */
 }
 
 h1 {
-  /* display: flex;
-  justify-content: center; */
+  font-size: 80px;
+  font-family: 'Itim', cursive;
+  /* margin-bottom: 230px; */
+}
+
+h2 {
+  /* margin-top: 30px; */
 }
 
 .box-container {
@@ -21,61 +42,80 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	align-content: space-evenly;
+  margin-top: 35px;
+  margin-bottom: 50px;
 }
 
 .box1 {
-  height: 10%;
-  width: 10%;
-  padding: 25px;
+  height: 150px;
+  width: 150px;
+  /* padding: 25px; */
   background-color: #24680A;
+  margin: 7.5px;
+  border: 2px solid black;
 }
 
 .box2 {
-  height: 10%;
-  width: 10%;
-  padding: 25px;
+  height: 150px;
+  width: 150px;
+  /* padding: 25px; */
   background-color: #13579B;
+  margin: 7.5px;
+  border: 2px solid black;
 }
 
 .box3 {
-  height: 10%;
-  width: 10%;
-  padding: 25px;
+  height: 150px;
+  width: 150px;
+  /* padding: 25px; */
   background-color: #ABCDEF;
+  margin: 7.5px;
+  border: 2px solid black;
 }
 
 .box4 {
-  height: 10%;
-  width: 10%;
-  padding: 25px;
+  height: 150px;
+  width: 150px;
+  /* padding: 25px; */
   background-color: #098765;
+  margin: 7.5px;
+  border: 2px solid black;
 }
 
 .box5 {
-  height: 10%;
-  width: 10%;
-  padding: 25px;
+  height: 150px;
+  width: 150px;
+  /* padding: 25px; */
   background-color: #111111;
+  margin: 7.5px;
+  border: 2px solid black;
 }
 
-.hex-values {
-  display: flex;
+h3 {
+  text-align: center;
 }
 
 .main-interface-buttons {
-
+  /* display: flex; */
 }
 
 button {
-
+  width: 175px;
+  height: 45px;
+  font-size: 22px;
+  background-color: #ffffff;
+  margin: 50px;
+  box-shadow: 2px 3px;
 }
 
 .saved-palettes {
+  width: 25%;
+  border-left: 2px solid black;
 
 }
 
 h2 {
-
+  text-align: center;
 }
 
 /* .box:nth-child(1) {
