@@ -35,16 +35,7 @@ var hex5 = document.getElementById("hex5")
 
 
 
-function randomHexKey() {
- var hexcode = '#'
- var hexidecimal = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
-  for (var i = 0; i < 6; i++) {
-    var randIndex = Math.floor(Math.random() * hexidecimal.length)
-    hexcode += hexidecimal[randIndex]
-}
 
-return hexcode
-}
 
 //
 // function returnFive() {
@@ -56,13 +47,30 @@ return hexcode
 
 class Color {
   constructor(hexcode) {
+    hexcode =
     this.locked = false;
-    this.hexcode = hexcode;
+    this.hexcode = hexcode
   }
 };
 
+function randomHexKey() {
+ var hexcode = '#'
+ var hexidecimal = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+  for (var i = 0; i < 6; i++) {
+    var randIndex = Math.floor(Math.random() * hexidecimal.length)
+    hexcode += hexidecimal[randIndex]
+}
+
+return hexcode
+}
+
 class Palette {
   constructor(color1, color2, color3, color4, color5) {
+    color1 = randomHexKey();
+    color2 = randomHexKey();
+    color3 = randomHexKey();
+    color4 = randomHexKey();
+    color5 = randomHexKey();
     this.color1 = color1
     this.color2 = color2
     this.color3 = color3
