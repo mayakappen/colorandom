@@ -33,18 +33,6 @@ var hex5 = document.getElementById("hex5")
 //savePaletteButton.addEventListener(‘click’ ,)
 
 
-
-
-
-
-//
-// function returnFive() {
-//   for (i = 0; i < 5; i++)
-//   return randomHexKey(i);
-// }
-//
-
-
 class Color {
   constructor(hexcode) {
     hexcode =
