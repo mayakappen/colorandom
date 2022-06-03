@@ -9,18 +9,14 @@ window.addEventListener('load', function () {
 });
 
 
-newPaletteButton.addEventListener('click', aaaaaasatyheleeiewqdwe)
+newPaletteButton.addEventListener('click', clickNewPalette)
 
-function aaaaaasatyheleeiewqdwe(){
-  var test = new Color
-  return test
+function clickNewPalette(){
+  palette1.returnFive()
+  palette1.updateColors()
 }
 
-// console.log(newPaletteButton)
 //savePaletteButton.addEventListener(‘click’ ,)
-
-//in general, who (what class) is responsible for each function?
-//what really needs to be global? keep global scope as thin as possible
 
 
 class Color {
@@ -43,35 +39,23 @@ class Color {
   }
 };
 
-
 class Palette {
   constructor() {
     this.uniqueID = Date.now();
-    this.uniquePalette = this.returnFive();
+    this.uniquePalette = [];
     this.colors = document.querySelectorAll(".color")
-    // this.box1 = document.getElementById("box1")
-    // this.box2 = document.getElementById("box2")
-    // this.box3 = document.getElementById("box3")
-    // this.box4 = document.getElementById("box4")
-    // this.box5 = document.getElementById("box5")
-    // this.hex1 = document.getElementById("hex1")
-    // this.hex2 = document.getElementById("hex2")
-    // this.hex3 = document.getElementById("hex3")
-    // this.hex4 = document.getElementById("hex4")
-    // this.hex5 = document.getElementById("hex5")
   }
 
   returnFive() {
-    var palette = []
+    this.uniquePalette = []
      var newColor = new Color();
      for (var i = 0; i < 5; i++) {
-     palette.push(newColor.randomHexKey())
+     this.uniquePalette.push(newColor.randomHexKey())
+     console.log(this.uniquePalette)
    }
-     return palette
   }
 
   updateColors() {
-    //if (Color.locked === false) {
       var box1 = document.getElementById("box1")
       var box2 = document.getElementById("box2")
       var box3 = document.getElementById("box3")
@@ -93,11 +77,11 @@ class Palette {
       box4.parentNode.style['background-color'] = this.uniquePalette[3]
       hex5.innerText = this.uniquePalette[4] + ' 🔓'
       box5.parentNode.style['background-color'] = this.uniquePalette[4]
-    //};
   };
 };
 
 var palette1 = new Palette();
+palette1.returnFive();
 
 
 
