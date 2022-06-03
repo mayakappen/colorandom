@@ -8,10 +8,14 @@
 
 //savePaletteButton.addEventListener(‘click’ ,)
 
+//in general, who (what class) is responsible for each function?
+//what really needs to be global? keep global scope as thin as possible
+
 
 class Color {
   constructor() {
     this.locked = false;
+    features/randomizing-JD-branchh
     this.hexcode = this.randomHexKey()
   }
 
