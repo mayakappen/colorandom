@@ -106,6 +106,9 @@ function test() {
     <div class="small-color" style="background-color:${palette1.uniquePalette[4].hexcode}">
       <div id="small-box5"></div>
     </div>
+    <div class="im-the-trashman">
+    🗑️
+    </div>
   </div>
 `
 console.log(palette1.uniquePalette[0].hexcode)
