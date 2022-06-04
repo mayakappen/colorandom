@@ -60,8 +60,22 @@ button {
 .saved-palettes {
   width: 25%;
   border-left: 2px solid black;
+  text-align: center;
 }
 
-h2 {
-  text-align: center;
+.small-box-container {
+  display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: space-evenly;
+}
+
+
+.small-color {
+  height: 35px;
+  width: 35px;
+  background-color: #24680A;
+  margin: 2px;
+  border: 1px solid black;
 }
