@@ -9,6 +9,7 @@ window.addEventListener('load', function () {
 });
 
 
+
 newPaletteButton.addEventListener('click', clickNewPalette)
 
 function clickNewPalette(){
@@ -16,7 +17,7 @@ function clickNewPalette(){
   palette1.updateColors()
 }
 
-//savePaletteButton.addEventListener(‘click’ ,)
+//savePaletteButton.addEventListener(‘click’, test)
 
 
 class Color {
@@ -43,15 +44,15 @@ class Palette {
   constructor() {
     this.uniqueID = Date.now();
     this.uniquePalette = [];
-    this.colors = document.querySelectorAll(".color")
+    // this.colors = document.querySelectorAll(".color")
   }
 
   returnFive() {
     this.uniquePalette = []
-     var newColor = new Color();
      for (var i = 0; i < 5; i++) {
-     this.uniquePalette.push(newColor.randomHexKey())
-     console.log(this.uniquePalette)
+       var newColor = new Color();
+     this.uniquePalette.push(newColor)
+     // console.log(this.uniquePalette)
    }
   }
 
@@ -67,16 +68,16 @@ class Palette {
       var hex4 = document.getElementById("hex4")
       var hex5 = document.getElementById("hex5")
 
-      hex1.innerText = this.uniquePalette[0] + ' 🔓'
-      box1.parentNode.style['background-color'] = this.uniquePalette[0]
-      hex2.innerText = this.uniquePalette[1] + ' 🔓'
-      box2.parentNode.style['background-color'] = this.uniquePalette[1]
-      hex3.innerText = this.uniquePalette[2] + ' 🔓'
-      box3.parentNode.style['background-color'] = this.uniquePalette[2]
-      hex4.innerText = this.uniquePalette[3] + ' 🔓'
-      box4.parentNode.style['background-color'] = this.uniquePalette[3]
-      hex5.innerText = this.uniquePalette[4] + ' 🔓'
-      box5.parentNode.style['background-color'] = this.uniquePalette[4]
+      hex1.innerText = palette1.uniquePalette[0].hexcode + ' 🔓'
+      box1.parentNode.style['background-color'] = palette1.uniquePalette[0].hexcode
+      hex2.innerText = palette1.uniquePalette[1].hexcode + ' 🔓'
+      box2.parentNode.style['background-color'] = this.uniquePalette[1].hexcode
+      hex3.innerText = palette1.uniquePalette[2].hexcode + ' 🔓'
+      box3.parentNode.style['background-color'] = this.uniquePalette[2].hexcode
+      hex4.innerText = palette1.uniquePalette[3].hexcode + ' 🔓'
+      box4.parentNode.style['background-color'] = this.uniquePalette[3].hexcode
+      hex5.innerText = palette1.uniquePalette[4].hexcode + ' 🔓'
+      box5.parentNode.style['background-color'] = this.uniquePalette[4].hexcode
   };
 };
 
