@@ -1,6 +1,8 @@
 
 newPaletteButton = document.querySelector(".new-palette-button");
 savePaletteButton = document.querySelector(".save-palette-button");
+smallBoxContainer = document.querySelector(".small-box-container");
+savePaletteSection = document.querySelector(".saved-palettes");
 
 ///Event Listeners///
 
@@ -8,16 +10,15 @@ window.addEventListener('load', function () {
   palette1.updateColors()
 });
 
-
-
 newPaletteButton.addEventListener('click', clickNewPalette)
+savePaletteButton.addEventListener('click', test)
 
 function clickNewPalette(){
   palette1.returnFive()
   palette1.updateColors()
 }
 
-//savePaletteButton.addEventListener(‘click’, test)
+
 
 
 class Color {
@@ -53,6 +54,7 @@ class Palette {
        var newColor = new Color();
      this.uniquePalette.push(newColor)
      // console.log(this.uniquePalette)
+     // console.log(this.uniqueID)
    }
   }
 
@@ -78,12 +80,34 @@ class Palette {
       box4.parentNode.style['background-color'] = this.uniquePalette[3].hexcode
       hex5.innerText = palette1.uniquePalette[4].hexcode + ' 🔓'
       box5.parentNode.style['background-color'] = this.uniquePalette[4].hexcode
+
+      return palette1.uniqueID;
   };
 };
 
 var palette1 = new Palette();
 palette1.returnFive();
 
+function test() {
+  var smallBox = `
+  <div class="small-color">
+    <div id="small-box1"></div>
+  </div>
+  <div class="small-color">
+    <div id="small-box2"></div>
+  </div>
+  <div class="small-color">
+    <div id="small-box3"></div>
+  </div>
+  <div class="small-color">
+    <div id="small-box4"></div>
+  </div>
+  <div class="small-color">
+    <div id="small-box5"></div>
+  </div>
+`
+smallBoxContainer.innerHTML += smallBox
+}
 
 
 
