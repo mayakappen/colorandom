@@ -65,17 +65,25 @@ button {
 
 .small-box-container {
   display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	align-content: space-evenly;
 }
 
+.small-box1 {
+
+}
+
+.saved-palette-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
 
 .small-color {
   height: 35px;
   width: 35px;
-  background-color: #24680A;
   margin: 2px;
   border: 1px solid black;
 }
