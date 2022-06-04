@@ -2,19 +2,15 @@
   font-family: 'Itim', cursive;
 }
 
-
 html {
   height: 100vh;
-  /* width: 100vw; */
 }
 
 body {
   display: flex;
   justify-content: center;
   height: 100vh;
-  /* width: 100vw; */
 }
-
 
 .main-interface {
   display: flex;
@@ -23,17 +19,11 @@ body {
   height: 89vh;
   width: 75%;
   align-items: center;
-  /* width: 100vw; */
 }
 
 h1 {
   font-size: 80px;
   font-family: 'Itim', cursive;
-  /* margin-bottom: 230px; */
-}
-
-h2 {
-  /* margin-top: 30px; */
 }
 
 .box-container {
@@ -47,21 +37,15 @@ h2 {
 }
 
 .color {
-  height: 150px;
-  width: 150px;
-  /* padding: 25px; */
+  height: 125px;
+  width: 125px;
   background-color: #24680A;
-  margin: 7.5px;
+  margin: 5px;
   border: 2px solid black;
 }
 
-
 h3 {
   text-align: center;
-}
-
-.main-interface-buttons {
-  /* display: flex; */
 }
 
 button {
@@ -76,13 +60,8 @@ button {
 .saved-palettes {
   width: 25%;
   border-left: 2px solid black;
-
 }
 
 h2 {
   text-align: center;
 }
-
-/* .box:nth-child(1) {
-  background-color: #24680A
-} */
