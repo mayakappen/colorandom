@@ -73,13 +73,13 @@ class Palette {
       hex1.innerText = palette1.uniquePalette[0].hexcode + ' 🔓'
       box1.parentNode.style['background-color'] = palette1.uniquePalette[0].hexcode
       hex2.innerText = palette1.uniquePalette[1].hexcode + ' 🔓'
-      box2.parentNode.style['background-color'] = this.uniquePalette[1].hexcode
+      box2.parentNode.style['background-color'] = palette1.uniquePalette[1].hexcode
       hex3.innerText = palette1.uniquePalette[2].hexcode + ' 🔓'
-      box3.parentNode.style['background-color'] = this.uniquePalette[2].hexcode
+      box3.parentNode.style['background-color'] = palette1.uniquePalette[2].hexcode
       hex4.innerText = palette1.uniquePalette[3].hexcode + ' 🔓'
-      box4.parentNode.style['background-color'] = this.uniquePalette[3].hexcode
+      box4.parentNode.style['background-color'] = palette1.uniquePalette[3].hexcode
       hex5.innerText = palette1.uniquePalette[4].hexcode + ' 🔓'
-      box5.parentNode.style['background-color'] = this.uniquePalette[4].hexcode
+      box5.parentNode.style['background-color'] = palette1.uniquePalette[4].hexcode
 
       return palette1.uniqueID;
   };
@@ -90,24 +90,33 @@ palette1.returnFive();
 
 function test() {
   var smallBox = `
-  <div class="small-color">
-    <div id="small-box1"></div>
-  </div>
-  <div class="small-color">
-    <div id="small-box2"></div>
-  </div>
-  <div class="small-color">
-    <div id="small-box3"></div>
-  </div>
-  <div class="small-color">
-    <div id="small-box4"></div>
-  </div>
-  <div class="small-color">
-    <div id="small-box5"></div>
+  <div class="saved-palette-box">
+    <div class="small-color" style="background-color:${palette1.uniquePalette[0].hexcode}">
+      <div id="small-box1"></div>
+    </div>
+    <div class="small-color" style="background-color:${palette1.uniquePalette[1].hexcode}">
+      <div id="small-box2"></div>
+    </div>
+    <div class="small-color" style="background-color:${palette1.uniquePalette[2].hexcode}">
+      <div id="small-box3"></div>
+    </div>
+    <div class="small-color" style="background-color:${palette1.uniquePalette[3].hexcode}">
+      <div id="small-box4"></div>
+    </div>
+    <div class="small-color" style="background-color:${palette1.uniquePalette[4].hexcode}">
+      <div id="small-box5"></div>
+    </div>
+    <div class="im-the-trashman">
+    🗑️
+    </div>
   </div>
 `
+console.log(palette1.uniquePalette[0].hexcode)
 smallBoxContainer.innerHTML += smallBox
 }
+
+//containers float column
+
 
 
 
