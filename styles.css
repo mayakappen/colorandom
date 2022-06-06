@@ -52,20 +52,14 @@ h1 {
   align-content: space-evenly;
 }
 
-.locks:hover {
+img:hover {
   cursor: pointer;
 }
 
-.trashcan {
-  width: 2.5vw;
-  align-self: center;
-  margin-top: 1.2vh;
-  margin-left: .1vw;
-}
 
 #lock1, #lock2, #lock3, #lock4, #lock5 {
-  padding-right: 5.5vw;
-  padding-left: 5.5vw;
+  margin-right: 5.5vw;
+  margin-left: 5.5vw;
   height: 3vw;
   width: auto;
 }
@@ -133,4 +127,15 @@ button:hover {
   margin: 2px;
   border: 1px solid black;
   border-radius: 5px;
+}
+
+.trashcan {
+  width: 2.5vw;
+  align-self: center;
+  margin-top: 1.2vh;
+  margin-left: .1vw;
+}
+
+.trashcan:hover {
+  cursor: pointer;
 }
