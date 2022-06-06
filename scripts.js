@@ -143,7 +143,7 @@ function miniBox() {
       <div id="small-box5"></div>
     </div>
     <div class="im-the-trashman">
-    🗑️
+    <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" class="trashcan" alt="trashman">
     </div>
   </div>
 `
