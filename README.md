@@ -24,7 +24,7 @@
 
 
 ## Illustrations
-  ![ColoRandom](https://files.slack.com/files-pri/T029P2S9M-F03JA92ELTY/screen_shot_2022-06-06_at_2.41.43_pm.png)
+  ![ColoRandom](https://user-images.githubusercontent.com/100726140/172247954-7a74d3cd-3d93-4f73-a8b8-6cb7fe7e193e.png)
 
 ## Features
 - Are able to show a random color palette on the click of a button.
