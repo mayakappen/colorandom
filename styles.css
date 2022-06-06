@@ -57,7 +57,14 @@ h1 {
   cursor: pointer;
 }
 
-img {
+.trashcan {
+  width: 2.5vw;
+  align-self: center;
+  margin-top: 1.2vh;
+  margin-left: .1vw;
+}
+
+#lock1, #lock2, #lock3, #lock4, #lock5 {
   padding-right: 5.5vw;
   padding-left: 5.5vw;
   height: 3vw;
@@ -111,13 +118,6 @@ button:hover {
 	justify-content: center;
 	align-items: center;
 	align-content: space-evenly;
-}
-
-.im-the-trashman {
-  width: 2vw;
-  height: 3vh;
-  align-self: center;
-  margin-left: 4px;
 }
 
 .saved-palette-box {
