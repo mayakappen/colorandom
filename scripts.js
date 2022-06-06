@@ -13,6 +13,7 @@ var newPaletteButton = document.querySelector(".new-palette-button");
 var savePaletteButton = document.querySelector(".save-palette-button");
 var smallBoxContainer = document.querySelector(".small-box-container");
 var savePaletteSection = document.querySelector(".saved-palettes");
+var savedPaletteBox = document.querySelector(".saved-palette-box");
 
 var lock1 = document.getElementById('lock1')
 var lock2 = document.getElementById('lock2')
@@ -24,27 +25,21 @@ var locks = [lock1, lock2, lock3, lock4, lock5]
 var lockedImg = "https://icons.iconarchive.com/icons/iconsmind/outline/48/Lock-2-icon.png"
 var unlockedImg = "https://icons.iconarchive.com/icons/iconsmind/outline/48/Unlock-2-icon.png"
 
-
-
-///Event Listeners///
-
 window.addEventListener('load', function () {
   palette1.updateColors()
 });
 
 newPaletteButton.addEventListener('click', clickNewPalette)
 savePaletteButton.addEventListener('click', miniBox)
-
-function clickNewPalette(){
-  palette1.returnFive()
-  palette1.updateColors()
-}
-
 lock1.addEventListener('click', changeLock1)
 lock2.addEventListener('click', changeLock2)
 lock3.addEventListener('click', changeLock3)
 lock4.addEventListener('click', changeLock4)
 lock5.addEventListener('click', changeLock5)
+
+smallBoxContainer.addEventListener('click', function(event) {
+  deletePalette(event);
+});
 
 class Color {
   constructor() {
@@ -55,8 +50,6 @@ class Color {
   randomHexKey() {
     var hexcode = this.hexcode
     if (this.locked === false) {
-
-
       hexcode = '#'
       var hexidecimal = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
       for (var i = 0; i < 6; i++) {
@@ -65,15 +58,13 @@ class Color {
       }
     }
     return hexcode
-}
-
   }
+}
 
 class Palette {
   constructor() {
     this.uniqueID = Date.now();
     this.uniquePalette = [];
-    // this.colors = document.querySelectorAll(".color")
   }
 
   returnFive() {
@@ -86,22 +77,18 @@ class Palette {
           var newColor = new Color();
           helperArray.push(newColor)
         }
-
-      }
+    }
       this.uniquePalette = helperArray
-
     } else {
       for (var i = 0; i < 5; i++) {
         var newColor = new Color()
         this.uniquePalette.push(newColor)
-
       }
     }
     return this.uniquePalette
   }
 
   updateColors() {
-
       hex1.innerText = palette1.uniquePalette[0].hexcode
       box1.parentNode.style['background-color'] = palette1.uniquePalette[0].hexcode
       hex2.innerText = palette1.uniquePalette[1].hexcode
@@ -112,21 +99,20 @@ class Palette {
       box4.parentNode.style['background-color'] = palette1.uniquePalette[3].hexcode
       hex5.innerText = palette1.uniquePalette[4].hexcode
       box5.parentNode.style['background-color'] = palette1.uniquePalette[4].hexcode
-
-      return palette1.uniqueID;
-      //
-
-  };
-};
+  }
+}
 
 var palette1 = new Palette();
 palette1.returnFive(palette1);
 
-
+function clickNewPalette(){
+  palette1.returnFive()
+  palette1.updateColors()
+}
 
 function miniBox() {
   var smallBox = `
-  <div class="saved-palette-box">
+  <section class="saved-palette-box">
     <div class="small-color" style="background-color:${palette1.uniquePalette[0].hexcode}">
       <div id="small-box1"></div>
     </div>
@@ -145,17 +131,10 @@ function miniBox() {
     <div class="im-the-trashman">
     <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" class="trashcan" alt="trashman">
     </div>
-  </div>
+  </section>
 `
-console.log(palette1.uniquePalette[0].hexcode)
 smallBoxContainer.innerHTML += smallBox
 }
-
-var color1 = palette1.uniquePalette[0]
-var color2 = palette1.uniquePalette[1]
-var color3 = palette1.uniquePalette[2]
-var color4 = palette1.uniquePalette[3]
-var color5 = palette1.uniquePalette[4]
 
 function changeLock1() {
   if (lock1.src === unlockedImg) {
@@ -207,19 +186,8 @@ function changeLock5() {
   }
 }
 
-
-
-
-//containers float column
-
-
-
-
-//looping through all colors generated
-//because boxes/hexes are numeric, we can dynamically generate the id for div as a string? 63-64
-//(i starts at zero, adding plus 1 makes it readable by people?)
-//look up how to concatenate a string and add numbers
-// for (var i = 0; i < this.uniquePalette.length; i++) {
-// var box = document.getElementById('box' + (i + 1))
-// var hex = document.getElementById('hex' + (i + 1))
-// var box1 = document.getElementById("box1")
+function deletePalette(event) {
+  if (event.target.classList.contains("trashcan")) {
+    event.target.closest("section").remove();
+  }
+}
