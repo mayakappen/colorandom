@@ -15,7 +15,6 @@ body {
 .main-interface {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
   height: 89vh;
   width: 75vw;
   align-items: center;
