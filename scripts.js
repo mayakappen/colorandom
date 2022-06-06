@@ -8,27 +8,23 @@ var hex2 = document.getElementById("hex2")
 var hex3 = document.getElementById("hex3")
 var hex4 = document.getElementById("hex4")
 var hex5 = document.getElementById("hex5")
-
+var lock1 = document.getElementById("lock1")
+var lock2 = document.getElementById("lock2")
+var lock3 = document.getElementById("lock3")
+var lock4 = document.getElementById("lock4")
+var lock5 = document.getElementById("lock5")
+var locks = [lock1, lock2, lock3, lock4, lock5]
+var lockedImg = "https://icons.iconarchive.com/icons/iconsmind/outline/48/Lock-2-icon.png"
+var unlockedImg = "https://icons.iconarchive.com/icons/iconsmind/outline/48/Unlock-2-icon.png"
 var newPaletteButton = document.querySelector(".new-palette-button");
 var savePaletteButton = document.querySelector(".save-palette-button");
 var smallBoxContainer = document.querySelector(".small-box-container");
 var savePaletteSection = document.querySelector(".saved-palettes");
 var savedPaletteBox = document.querySelector(".saved-palette-box");
 
-var lock1 = document.getElementById('lock1')
-var lock2 = document.getElementById('lock2')
-var lock3 = document.getElementById('lock3')
-var lock4 = document.getElementById('lock4')
-var lock5 = document.getElementById('lock5')
-var locks = [lock1, lock2, lock3, lock4, lock5]
-
-var lockedImg = "https://icons.iconarchive.com/icons/iconsmind/outline/48/Lock-2-icon.png"
-var unlockedImg = "https://icons.iconarchive.com/icons/iconsmind/outline/48/Unlock-2-icon.png"
-
 window.addEventListener('load', function () {
   palette1.updateColors()
 });
-
 newPaletteButton.addEventListener('click', clickNewPalette)
 savePaletteButton.addEventListener('click', miniBox)
 lock1.addEventListener('click', changeLock1)
@@ -36,7 +32,6 @@ lock2.addEventListener('click', changeLock2)
 lock3.addEventListener('click', changeLock3)
 lock4.addEventListener('click', changeLock4)
 lock5.addEventListener('click', changeLock5)
-
 smallBoxContainer.addEventListener('click', function(event) {
   deletePalette(event);
 });
